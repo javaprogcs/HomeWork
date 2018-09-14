@@ -57,6 +57,7 @@ lagou_company 公司分离:
 
 
 -- 也可以分步进行。使用 union 语句虽然会简化语句，但效率会比较低
+
         create table lagou_position as
         select pid, cid as city, company_id as company, position, field, salary_min, salary_max, workyear, education, ptype, pnature,           advantage, published_at, updated_at
         from (select * from lagou_position_bk where district is null) p
